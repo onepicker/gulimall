@@ -5,9 +5,17 @@ spring:
     username: root
     password: 445885852
 
+  application:
+    name: gulimall-coupon
+  spring:
+    cloud:
+      nacos:
+        config:
+          server-addr:127.0.0.1:8848
 mybatis-plus:
   mapper-locations: classpth:/mapper/**/*.xml
   global-config:
     db-config:
       id-type: auto
-
+server:
+  port : 7000

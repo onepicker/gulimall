@@ -1,14 +1,21 @@
-
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/gulimall_ums?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 445885852
-
+  application:
+    name: gulimall-member
+    spring:
+      cloud:
+        nacos:
+          config:
+            server-addr:127.0.0.1:8848
 mybatis-plus:
   mapper-locations: classpth:/mapper/**/*.xml
   global-config:
     db-config:
       id-type: auto
+server:
+  port: 8000
 
